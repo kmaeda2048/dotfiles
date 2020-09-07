@@ -9,7 +9,7 @@ export LESS='-M -R -N -J'
 alias g='git'
 alias ga='git add'
 alias gb='git branch'
-alias gc='git commit -m'
+alias gc='git commit'
 alias gco='git checkout'
 alias gf='git fetch'
 alias gfp='git fetch -p'
@@ -22,10 +22,13 @@ alias gpuoh='git push -u origin HEAD'
 alias gs='git status'
 alias gsl='git stash list'
 alias gss='git stash save'
+gcm () {
+    git commit -m "$1"
+}
 gsa () {
     git stash apply stash@{$1}
 }
-
 gsd () {
     git stash drop stash@{$1}
 }
+
