@@ -13,7 +13,6 @@ alias gc='git commit'
 alias gco='git checkout'
 alias gf='git fetch'
 alias gfp='git fetch -p'
-alias glog='git log -n 10 --oneline --graph'
 alias gm='git merge'
 alias gms='git merge --squash'
 alias gmom='git merge origin/master' # TODO: mainへの対応
@@ -22,6 +21,12 @@ alias gpuoh='git push -u origin HEAD'
 alias gs='git status'
 alias gsl='git stash list'
 alias gss='git stash save'
+gl () {
+    git log --oneline --graph -n ${1:-10}
+}
+gla () {
+    git log --oneline --graph --all -n ${1:-10}
+}
 gcm () {
     git commit -m "$1"
 }
