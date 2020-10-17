@@ -4,3 +4,8 @@ echo "$(curl https://raw.githubusercontent.com/kmaeda2048/dotfiles/master/.bashr
 echo "$(curl https://raw.githubusercontent.com/kmaeda2048/dotfiles/master/.vimrc)" > ~/.vimrc
 ln -s ~/.vimrc ~/.virc
 
+if [ ! -f ~/bin ]; then
+  mkdir ~/bin
+  echo 'Created ~/bin'
+fi
+
