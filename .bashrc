@@ -8,7 +8,7 @@ alias ll='ls -alFh'
 export LESS='-M -R -N -J'
 alias g='git'
 alias ga='git add'
-alias gb='git branch'
+alias gb='git branch -v'
 alias gc='git commit'
 alias gco='git checkout'
 alias gf='git fetch'
@@ -18,17 +18,35 @@ alias gms='git merge --squash'
 alias gmom='git merge origin/master' # TODO: mainへの対応
 alias gp='git push'
 alias gpuoh='git push -u origin HEAD'
+alias grbc='git rebase --continue'
+alias grbs='git rebase --skip'
+alias grba='git rebase --abort'
 alias gs='git status'
 alias gsl='git stash list'
 alias gss='git stash save'
-gl () {
-    git log --oneline --graph -n ${1:-10}
-}
-gla () {
-    git log --oneline --graph --all -n ${1:-10}
-}
 gcm () {
     git commit -m "$1"
+}
+gl () {
+    git log --oneline --graph -n ${1:-30}
+}
+gla () {
+    git log --oneline --graph --all -n ${1:-30}
+}
+grb () {
+    git rebase $1
+}
+grbi () {
+    git rebase -i $1
+}
+grsh () {
+    git reset --hard $1
+}
+grsm () {
+    git reset --mixed $1
+}
+grss () {
+    git reset --soft $1
 }
 gsa () {
     git stash apply stash@{$1}
