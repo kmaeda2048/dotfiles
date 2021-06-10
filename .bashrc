@@ -31,10 +31,10 @@ gcm () {
     git commit -m "$1"
 }
 gl () {
-    git log --oneline --graph -n ${1:-30}
+    git log --oneline --graph
 }
 gla () {
-    git log --oneline --graph --all -n ${1:-30}
+    git log --oneline --graph --all
 }
 grb () {
     git rebase $1
