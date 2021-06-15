@@ -13,6 +13,8 @@ alias gc='git commit'
 alias gco='git checkout'
 alias gf='git fetch'
 alias gfp='git fetch -p'
+alias gl='git log --oneline --graph'
+alias gla='git log --oneline --graph --all'
 alias gm='git merge'
 alias gms='git merge --squash'
 alias gmom='git merge origin/master' # TODO: mainへの対応
@@ -29,12 +31,6 @@ alias d='docker container'
 alias dc='docker-compose'
 gcm () {
     git commit -m "$1"
-}
-gl () {
-    git log --oneline --graph
-}
-gla () {
-    git log --oneline --graph --all
 }
 grb () {
     git rebase $1
