@@ -1,5 +1,4 @@
-
-# start dotfiles/.bashrc -----------------------------------------------------------------
+#!/bin/bash
 
 PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\\$ "
 
@@ -29,30 +28,27 @@ alias gss='git stash save'
 alias di='docker image'
 alias d='docker container'
 alias dc='docker-compose'
-gcm () {
+gcm() {
     git commit -m "$1"
 }
-grb () {
-    git rebase $1
+grb() {
+    git rebase "$1"
 }
-grbi () {
-    git rebase -i $1
+grbi() {
+    git rebase -i "$1"
 }
-grsh () {
-    git reset --hard $1
+grsh() {
+    git reset --hard "$1"
 }
-grsm () {
-    git reset --mixed $1
+grsm() {
+    git reset --mixed "$1"
 }
-grss () {
-    git reset --soft $1
+grss() {
+    git reset --soft "$1"
 }
-gsa () {
-    git stash apply stash@{$1}
+gsa() {
+    git stash apply stash@{"$1"}
 }
-gsd () {
-    git stash drop stash@{$1}
+gsd() {
+    git stash drop stash@{"$1"}
 }
-
-# end dotfiles/.bashrc -------------------------------------------------------------------
-

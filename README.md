@@ -1,5 +1,12 @@
 # dotfiles
 
+## 初回
+
 ```shell
-curl https://raw.githubusercontent.com/kmaeda2048/dotfiles/master/install.sh | bash && source ~/.bashrc
+cd ~ && git clone https://github.com/kmaeda2048/dotfiles.git && bash ~/dotfiles/setup.sh && source ~/.bashrc
+```
+
+## 2回目以降
+
+```shell
 ```
