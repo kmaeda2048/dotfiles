@@ -52,3 +52,7 @@ gsa() {
 gsd() {
   git stash drop stash@{"$1"}
 }
+
+for file in `find ~/dotfiles/ignore -maxdepth 1 -name '*.sh'`; do
+  . "$file"
+done
