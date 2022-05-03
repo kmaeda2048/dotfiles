@@ -27,7 +27,7 @@ alias gsl='git stash list'
 alias gss='git stash save'
 alias di='docker image'
 alias d='docker container'
-alias dc='docker-compose'
+alias dc='docker compose'
 gcm() {
   git commit -m "$1"
 }
